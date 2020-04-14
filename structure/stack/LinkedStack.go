@@ -6,7 +6,7 @@ package stack
 
 type node struct {
 	Value Element
-	Next *node
+	Next  *node
 }
 
 type LinkedStack struct {
