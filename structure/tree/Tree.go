@@ -34,8 +34,6 @@ func CreateTree(preOrder InitList, inOder InitList) *Node {
 	}
 
 	return create(perOrderList, inOderList)
-
-	//return HaveEmptyCreate([]int{1, 3, 5, 10, 0, 6, 0, 0, 4, 7, 0, 0, 8, 0, 0})
 }
 
 /**
@@ -129,6 +127,39 @@ func LevelOder(root Node) {
 			queue.Push(*n.Right)
 		}
 	}
+}
+
+func MaxDepth(root Node) int {
+	if &root == nil {
+		return 0
+	}
+	level := make([]Element, 0)
+	queue := queue.New()
+	queue.Push(root)
+
+	floor, front, tail := 0, 0, queue.Size()
+
+	for !queue.IsEmpty() {
+		node := *(queue.Pop())
+		n, _ := node.(Node)
+		front++
+		level = append(level, n.Val)
+		if n.Left != nil {
+			queue.Push(*n.Left)
+		}
+		if n.Right != nil {
+			queue.Push(*n.Right)
+		}
+
+		if front == tail {
+			front = 0
+			tail = queue.Size()
+			floor++
+			fmt.Println(level)
+			level = make([]Element, 0)
+		}
+	}
+	return floor
 }
 
 func print(node *Node) {

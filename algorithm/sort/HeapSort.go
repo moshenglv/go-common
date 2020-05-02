@@ -1,6 +1,6 @@
 package sort
 
-func Sort(list []int) {
+func HeapSort(list []int) {
 	length := len(list)
 	for {
 		if length < 1 {

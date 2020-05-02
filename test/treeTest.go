@@ -23,6 +23,10 @@ func TreeTest() {
 	tree.LevelOder(*getRoot())
 	fmt.Println()
 
+	fmt.Println("层级:")
+	fmt.Print(tree.MaxDepth(*getRoot()))
+	fmt.Println()
+
 	//根据数组创建二叉树
 	fmt.Println("二叉树创建:")
 	list := tree.InitList{1, 3, 4, 5, 6, 7, 8, 10, nil, nil, nil, nil, nil, nil, nil}
