@@ -11,8 +11,8 @@ func Hello() {
 
 func StackTest() {
 	//测试栈
-	//stack := stack.NewLinkedStack()
-	stack := stack.NewArrayStack()
+	stack := stack.NewLinkedStack()
+	//stack := stack.NewArrayStack()
 	stack.Push(3, 2, 5, 9)
 	fmt.Println("入栈顺序:3 2 5 9")
 	fmt.Println("size:", stack.Size())
