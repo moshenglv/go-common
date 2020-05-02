@@ -1,6 +1,6 @@
 package queue
 
-type Node interface {}
+type Node interface{}
 
 type Queue struct {
 	nodes []Node
@@ -20,26 +20,25 @@ func New() *Queue {
 	return &q
 }
 
-func (q *Queue) Push(node Node){
+func (q *Queue) Push(node Node) {
 	q.nodes = append(q.nodes, node)
 }
 
 func (q *Queue) Pop() *Node {
-	if len(q.nodes)<=0 {
+	if len(q.nodes) <= 0 {
 		return nil
 	}
 	val := q.nodes[0]
-    q.nodes = q.nodes[1:]
+	q.nodes = q.nodes[1:]
 	return &val
 }
 
-
 // 队列是否为空
-func (q *Queue) IsEmpty() bool  {
+func (q *Queue) IsEmpty() bool {
 	return len(q.nodes) == 0
 }
 
 // 队列长度
-func (q *Queue) Size() int  {
+func (q *Queue) Size() int {
 	return len(q.nodes)
 }

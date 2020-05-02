@@ -1,9 +1,9 @@
 package stack
 
-type Element interface {}
+type Element interface{}
 
 type Interface interface {
-	Push(e...Element)
+	Push(e ...Element)
 
 	Pop() Element
 
@@ -15,4 +15,3 @@ type Interface interface {
 
 	Size() int
 }
-

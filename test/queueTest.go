@@ -5,7 +5,7 @@ import (
 	"go-common/structure/queue"
 )
 
-func QueueTest()  {
+func QueueTest() {
 	q := queue.New()
 	fmt.Println("length:", q.Size())
 	q.Push("a")

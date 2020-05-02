@@ -1,5 +1,5 @@
 package utils
 
-func Substring(start,end int) interface{} {
+func Substring(start, end int) interface{} {
 
 }

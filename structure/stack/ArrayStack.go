@@ -9,11 +9,11 @@ func NewArrayStack() *ArrayStack {
 	return &ArrayStack{}
 }
 
-func (s *ArrayStack) Push(e...Element)  {
+func (s *ArrayStack) Push(e ...Element) {
 	*s = append(*s, e...)
 }
 
-func (s *ArrayStack)Pop() Element {
+func (s *ArrayStack) Pop() Element {
 	if s.IsEmpty() {
 		return nil
 	}
@@ -22,23 +22,21 @@ func (s *ArrayStack)Pop() Element {
 	return val
 }
 
-func (s *ArrayStack)Peek() Element {
+func (s *ArrayStack) Peek() Element {
 	if s.IsEmpty() {
 		return nil
 	}
 	return (*s)[s.Size()-1]
 }
 
-func (s *ArrayStack)Clear(){
+func (s *ArrayStack) Clear() {
 	*s = ArrayStack{}
 }
 
-func (s *ArrayStack)IsEmpty() bool {
+func (s *ArrayStack) IsEmpty() bool {
 	return len(*s) == 0
 }
 
-func (s *ArrayStack)Size() int {
+func (s *ArrayStack) Size() int {
 	return len(*s)
 }
-
-
