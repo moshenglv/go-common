@@ -22,6 +22,9 @@ func NewEmptyHeap(cap int) *Heap {
 	}
 }
 
+/**
+插入数据后从下往上堆化
+*/
 func (heap *Heap) Insert(data int) bool {
 	if heap.Count >= heap.capacity {
 		return false
